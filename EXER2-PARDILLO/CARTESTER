@@ -1,1 +1,42 @@
+public class Car{
+    private String color;
+    private String plateNO;
+    private String engineNO;
+    private String chasisNO;
 
+    public Car () {
+        this.color = "White";
+        this.plateNO = "MARK1234";
+        this.engineNO = "Engine2468";
+        this.chasisNO = "Chasis36912";
+    }
+    
+    public Car(String color, String plateNO, String engineNO, String chasisNO) {
+            this.color = color;
+            this.plateNO = plateNO;
+            this.engineNO = engineNO;
+            this.chasisNO = chasisNO;
+    }
+        
+    public void displayInfo() {
+            String info = "";
+            info += "Color:" + this.color;
+            info += "\nplateNO:" + this.plateNO;
+            info += "\nengineNO:" + this.engineNO;
+            info += "\nchasisNO:" + this.chasisNO;
+            System.out.println(info);
+            
+    }
+}
+
+/////////////////////////
+
+public Class CarTester {
+        public static void main(String[] args) {
+            car C1 = new Car(color:"Yellow", plateNO:"Mark1234", engineNO:"Engine2468", chasisNO:"Chasis36912");
+            car C2 = new Car()
+
+            C1.displayInfo();
+            C2.displayInfo();
+        }
+    }
