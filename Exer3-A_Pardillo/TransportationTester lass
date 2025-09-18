@@ -1,0 +1,45 @@
+public class TransportationTester {
+    public static void main(String[] args) {
+        // Create instances of each subclass
+        Airplane boeing747 = new Airplane("Boeing 747", 416, 913, 12500, 68);
+        Helicopter blackHawk = new Helicopter("Black Hawk", 11, 294, 5800, 4);
+        
+        Truck volvoTruck = new Truck("Volvo FH16", 3, 90, 18, 25.5);
+        SUV toyotaFortuner = new SUV("Toyota Fortuner", 7, 180, 4, true);
+        Tricycle pedicab = new Tricycle("Pedicab", 2, 15, 3, true);
+        Motorcycle harley = new Motorcycle("Harley Davidson", 2, 180, 2, "V-Twin");
+        Kariton cart = new Kariton("Wooden Cart", 1, 5, 2, true);
+        
+        Ship titanic = new Ship("Titanic", 2435, 39, 52310, 9);
+        Boat speedboat = new Boat("Speedboat", 8, 80, 2.5, "motor");
+        
+        // Test each transportation type
+        System.out.println("=== AIR TRANSPORT ===");
+        boeing747.displayInfo();
+        boeing747.takeOff();
+        boeing747.move();
+        boeing747.deployLandingGear();
+        boeing747.stop();
+        
+        System.out.println("\n=== LAND TRANSPORT ===");
+        volvoTruck.displayInfo();
+        volvoTruck.move();
+        volvoTruck.loadCargo();
+        volvoTruck.stop();
+        
+        toyotaFortuner.displayInfo();
+        toyotaFortuner.move();
+        toyotaFortuner.toggle4WD();
+        toyotaFortuner.stop();
+        
+        System.out.println("\n=== WATER TRANSPORT ===");
+        titanic.displayInfo();
+        titanic.move();
+        titanic.soundHorn();
+        titanic.stop();
+        
+        speedboat.displayInfo();
+        speedboat.move();
+        speedboat.stop();
+    }
+}
